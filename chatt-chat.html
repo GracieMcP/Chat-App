@@ -1,0 +1,23 @@
+<head>
+  <title>Chatt-Chat</title>
+</head>
+
+<body>
+  <h1>Welcome to Chatt-Chat!</h1>
+
+  {{> hello}}
+</body>
+
+<template name="hello">
+  <form>
+	<input name = "sentence" autofocus />
+  </form>
+  {{#each sentences}}
+	  <div class = "sentence">
+		<b>{{this.speaker}}</b>: 
+		{{this.text}}
+	  </div>
+  {{/each}}
+
+  
+</template>
